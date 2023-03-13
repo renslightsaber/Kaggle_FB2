@@ -18,17 +18,10 @@
  
 ### 공사중  
  
-## What I learned from this Competition:
- - Needs of a various or a lot of Experiments
- - [Gradient Clipping](https://neptune.ai/blog/understanding-gradient-clipping-and-how-it-can-fix-exploding-gradients-problem)
- - Scheduler
-
-## Code on this Repository is developed!
 
  
 ## How to train or inference in CLI? 
-[Check Here](https://github.com/renslightsaber/Dacon_Shoppingmall_Reviews_Classificaion/blob/main/how_to_train_inference.md) 
+[pip install](https://github.com/renslightsaber/Kaggle_FB2/blob/main/needtoinstall.md)
+[and Check Here](https://github.com/renslightsaber/Dacon_Shoppingmall_Reviews_Classificaion/blob/main/how_to_train_inference.md) 
 
  
-## Certificate of [A.RYANG](https://github.com/nomaday)'s Prize
-<img src="/imgs/스크린샷 2023-03-11 오후 6.25.06.png" width="48%"></img>
