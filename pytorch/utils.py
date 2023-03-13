@@ -59,14 +59,18 @@ def set_seed(seed=42):
     
     
 ################### Data Essay Function ##################
-def get_train_essay(essay_id, TRAIN_DIR = '/content/train/'):
+def get_train_essay(essay_id, 
+                    TRAIN_DIR # = '/content/train/'
+                   ):
     # TRAIN_DIR = config['base_path'] + "train/"
     essay_path = os.path.join(TRAIN_DIR, f"{essay_id}.txt")
     essay_text = open(essay_path, 'r').read()
     return essay_text
   
   
-def get_test_essay(essay_id, TEST_DIR = '/content/test/'):
+def get_test_essay(essay_id, 
+                   TEST_DIR # = '/content/test/'
+                  ):
     # TEST_DIR = config['base_path'] + "test/"
     essay_path = os.path.join(TEST_DIR, f"{essay_id}.txt")
     essay_text = open(essay_path, 'r').read()
@@ -74,10 +78,13 @@ def get_test_essay(essay_id, TEST_DIR = '/content/test/'):
   
   
 ########################### Data ###########################
-def kaggle_competition_data(base_path = config['base_path'], stage = "train", ratio = .5):
+def kaggle_competition_data(base_path, # = config['base_path'], 
+                            stage = "train", 
+                            ratio = .5):
     
     if stage == "train":
         train = pd.read_csv(base_path + 'train.csv')
+        TRAIN_DIR = base_path + "train/"
         train['essay_text'] = train['essay_id'].apply(get_train_essay)
         index_num = int(train.shape[0] * ratio)
         print("Ratio: ", ratio, "Index Num: ", index_num)
@@ -88,6 +95,7 @@ def kaggle_competition_data(base_path = config['base_path'], stage = "train", ra
 
     else:
         test = pd.read_csv(base_path + 'test.csv')
+        TEST_DIR = base_path + "test/"
         test['essay_text'] = test['essay_id'].apply(get_test_essay)
         print(test.shape)
         print(test.head(3))
