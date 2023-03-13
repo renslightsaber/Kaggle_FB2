@@ -1,7 +1,7 @@
 # 공사 중 Huggingface Trainer
 # How to train or inference in CLI? [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Yk7dF2YpVsYV6XRJWsM1HKWoWXXKRT1T?usp=sharing)
 
-#### You can check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kdBMySPzX4wxI_I9xJzguFKxx99HBz-T?usp=sharing) 
+#### You can check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IimJTkmvZ8bFCXUzQhXbYHGBaqk3Sfx4?usp=sharing) 
  
 
 
@@ -31,7 +31,7 @@ $ python train.py --base_path './data/' \
 - `n_epochs` : Epoch
 - `seed` : Random Seed (Default: 2022)
 - `train_bs` : Batch Size (Default: 8)
-- `max_length` : Max Length (Default: 128) for HuggingFace Tokenizer
+- `max_length` : Max Length (Default: 512) for HuggingFace Tokenizer when fine-tuning
 - `grad_clipping`: [Gradient Clipping](https://neptune.ai/blog/understanding-gradient-clipping-and-how-it-can-fix-exploding-gradients-problem)
 - `ratio` : 데이터를 Split하여 `train`(학습) 과 `valid`(성능 평가)를 만드는 비율을 의미. 정확히는 `train`의 Size 결정
 - `device`: GPU를 통한 학습이 가능하다면, `cuda` 로 설정할 수 있다.
@@ -68,7 +68,7 @@ $ python inference.py --base_path './data/' \
 - `n_epochs` : train 했을 때의 Epoch 수 (submission 파일명에 사용)  
 - `seed` : Random Seed (Default: 2022)
 - `valid_bs` : Batch Size for Inference (Default: 16) 
-- `max_length` : Max Length (Default: 256) for HuggingFace Tokenizer
+- `max_length` : Max Length (Default: 512) for HuggingFace Tokenizer
 - `device`: GPU를 통한 학습이 가능하다면, `cuda` 로 설정할 수 있다.
 - [`inference.py`](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch/inference.py) 참고!   
 
