@@ -91,7 +91,6 @@ def define():
     
     p.add_argument('--seed', type = int, default = 2022, help="Seed")
     p.add_argument('--train_bs', type = int, default = 8, help="Batch Size")
-    p.add_argument('--valid_bs', type = int, default = 16, help="Batch Size")
     
     p.add_argument('--max_length', type = int, default = 512, help="Max Length")
     
