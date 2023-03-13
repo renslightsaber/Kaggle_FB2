@@ -61,43 +61,49 @@ from utils import *
 
 
 ################## trained_model_paths #####################
-def trained_model_paths(n_folds, #= config['n_folds'], 
-                        model_save, # = config['model_save']
-                        ):
+## Better F1 Score Model paths 
+def trained_model_paths(n_folds, # = config['n_folds'], 
+                        model_save, # = config['model_save'], 
+                        model_type = "AutoModelForSequenceClassification"):
     print("n_folds: ",n_folds )
 
     model_paths_f1 = []
     for num in range(0, n_folds):
-        model_paths_f1.append(model_save + f"Loss-Fold-{num}_f1.bin")
+        if model_type == "AutoModelForSequenceClassification":
+            model_paths_f1.append(model_save + f'output_{num}/') #f'output_{num}/pytorch_model.bin')
+        else:
+            model_paths_f1.append(model_save + f'output_{num}/pytorch_model.bin')
 
     print(len(model_paths_f1))
     print(model_paths_f1)
     return model_paths_f1
 
+
   
   
 ##################### inference ###########################  
 def inference(model_paths, 
-              model_name,
+              model_name, # = config['model'], 
               model_type,
               test_dataset,
               tokenizer, 
-              collate_fn,
+              collate_fn, # = DataCollatorWithPadding(tokenizer=tokenizer ),
               bs,
-              device):
+              device= device):
 
     final_preds = []
     
     for i, path in enumerate(model_paths):
         if model_type == "AutoModelForSequenceClassification":
-            model = AutoModelForSequenceClassification.from_pretrained(path).to(device)
+            model = AutoModelForSequenceClassification.from_pretrained(path, local_files_only=True)
+            model = model.to(device)
         else:
             model = Model(model_name).to(device)
             model.load_state_dict(torch.load(path))
         
         print(f"Getting predictions for model {i+1}")
         training_args = TrainingArguments(output_dir=".",
-                                          per_device_eval_batch_size = bs,
+                                          per_device_eval_batch_size=config['valid_batch_size'],
                                           label_names=["target"])
         
         trainer = Trainer(model=model,
@@ -112,7 +118,7 @@ def inference(model_paths,
     # 그리고 평균을 내줍니다.
     final_preds = np.array(final_preds)
     final_preds = np.mean(final_preds, axis=0)
-    return final_preds  
+    return final_preds
   
 
     
@@ -182,7 +188,9 @@ def main(config):
     
     # model_paths
     model_paths_f1 = trained_model_paths(n_folds = config.n_folds,
-                                         model_save = config.model_save)
+                                         model_save = config.model_save,
+                                         model_type = config.model_type # "AutoModelForSequenceClassification"
+                                        )
                                         
     ## Inference GoGo
     f1_preds = inference(model_paths_f1, 
