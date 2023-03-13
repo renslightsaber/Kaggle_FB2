@@ -102,7 +102,7 @@ def inference(model_paths,
         
         trainer = Trainer(model=model,
                           args=training_args,
-                          data_collator
+                          data_collator = collate_fn
                           )
         
         predictions = trainer.predict(test_dataset)
