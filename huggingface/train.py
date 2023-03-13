@@ -14,9 +14,9 @@ import ast
 import copy
 from copy import deepcopy
 
-import torchmetrics
-from torchmetrics.classification import BinaryF1Score
-from torchmetrics.classification import BinaryAccuracy
+# import torchmetrics
+# from torchmetrics.classification import BinaryF1Score
+# from torchmetrics.classification import BinaryAccuracy
 
 import numpy as np
 import pandas as pd
@@ -55,7 +55,7 @@ warnings.filterwarnings("ignore")
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 from dataloader import *
-from new_trainer import *
+# from new_trainer import *
 from model import *
 from utils import *
 
