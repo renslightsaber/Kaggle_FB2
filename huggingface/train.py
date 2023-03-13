@@ -34,7 +34,6 @@ from torch.utils.data import Dataset, DataLoader
 
 ## Transforemr Import
 from transformers import AutoTokenizer, AutoModel, AdamW, AutoConfig, DataCollatorWithPadding
-from transformers import AdamW
 from transformers import Trainer, TrainingArguments
 from transformers import AutoModelForSequenceClassification
 
@@ -60,18 +59,19 @@ from model import *
 from utils import *
 
 
-######### Customized HuggingFace Trainer for Loss_fn "Cross Entropy Loss()"
+######### Customized HuggingFace Trainer for Loss_fn "Cross Entropy Loss()" ##################
 class MyTrainer(Trainer):
     def compute_loss(self, model, inputs, return_outputs=False):
         outputs = model(inputs['input_ids'], inputs['attention_mask'])
         # logits = outputs.get("logits")
         # compute custom loss (suppose one has 3 labels with different weights)
         loss_fct = nn.CrossEntropyLoss()
-        loss = loss_fct(outputs.logits.view(-1, self.model.config.num_labels), inputs['target'])
+        # loss = loss_fct(outputs.logits.view(-1, self.model.config.num_labels), inputs['target'])
+        loss = loss_fct(outputs.logits, inputs['target'])
         return (loss, outputs) if return_outputs else loss
 
     
-    
+############### config = define() #########################
 def define():
     p = argparse.ArgumentParser()
 
@@ -91,6 +91,7 @@ def define():
     
     p.add_argument('--seed', type = int, default = 2022, help="Seed")
     p.add_argument('--train_bs', type = int, default = 8, help="Batch Size")
+    p.add_argument('--valid_bs', type = int, default = 16, help="Batch Size")
     
     p.add_argument('--max_length', type = int, default = 512, help="Max Length")
     
@@ -109,7 +110,8 @@ def define():
     config = p.parse_args()
     return config
   
-  
+
+############# main ##################
 def main(config):
     
     HASH_NAME = config.hash
