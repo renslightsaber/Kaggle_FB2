@@ -64,8 +64,6 @@ def define():
     p.add_argument('--model_save', type = str, default = "./models/", help="Data Folder Path")
     p.add_argument('--sub_path', type = str, default = "./submission/", help="Data Folder Path")
    
-    p.add_argument('--train_dir', type = str, default = "train/", help="train's essay(txt) path")
-    p.add_argument('--test_dir', type = str, default = "test/", help="test's essay(txt) path")
     p.add_argument('--use_ratio', type = str, default = "./data/", help="Percentage of data to train")
     
     p.add_argument('--hash', type = str, default = "Pytorch", help="HASH NAME")
@@ -84,7 +82,7 @@ def define():
     p.add_argument('--ratio', type = float, default = 0.7, help="Ratio of Train, Valid")
     
     p.add_argument('--T_max', type = int, default = 500, help="T_max")
-    p.add_argument('--learning_rate', type = float, default = 5e-5, help="lr")
+    p.add_argument('--learning_rate', type = float, default = 1e-5, help="lr")
     p.add_argument('--min_lr', type = float, default = 1e-6, help="Min LR")
     p.add_argument('--weight_decay', type = float, default = 1e-6, help="Weight Decay")
 
