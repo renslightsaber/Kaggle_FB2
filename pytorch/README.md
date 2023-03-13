@@ -1,4 +1,4 @@
-# 공사 중 Huggingface Trainer
+# 공사 중 Pytorch
 # How to train or inference in CLI? [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Yk7dF2YpVsYV6XRJWsM1HKWoWXXKRT1T?usp=sharing)
 
 #### You can check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IimJTkmvZ8bFCXUzQhXbYHGBaqk3Sfx4?usp=sharing) 
