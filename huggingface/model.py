@@ -44,17 +44,17 @@ class Model(nn.Module):
         self.drop = nn.Dropout(p=0.2)
         self.pooler = MeanPooling()
         self.fc = nn.Linear(self.config.hidden_size, 3) # n_classes = 7
-        self.softmax = nn.Softmax(dim = -1)
+        # self.softmax = nn.Softmax(dim = -1)
         
-    def forward(self, ids, mask):        
-        out = self.model(input_ids=ids,attention_mask=mask,
+    def forward(self, input_ids, attention_mask):
+        out = self.model(input_ids=input_ids,
+                         attention_mask=attention_mask, 
                          output_hidden_states=False)
-        out = self.pooler(out.last_hidden_state, mask)
+        out = self.pooler(out.last_hidden_state, attention_mask)
         out = self.drop(out)
         outputs = self.fc(out)
-        outputs = self.softmax(outputs)
-        
-        return outputs
+        # outputs = self.softmax(outputs)
+        return SequenceClassifierOutput(logits=outputs)
       
       
       
