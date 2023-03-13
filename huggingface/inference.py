@@ -61,8 +61,9 @@ from utils import *
 
 
 ################## trained_model_paths #####################
-def trained_model_paths(n_folds = config['n_folds'], 
-                        model_save = config['model_save']):
+def trained_model_paths(n_folds, #= config['n_folds'], 
+                        model_save, # = config['model_save']
+                        ):
     print("n_folds: ",n_folds )
 
     model_paths_f1 = []
