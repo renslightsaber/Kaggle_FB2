@@ -58,23 +58,11 @@ def set_seed(seed=42):
     
     
     
-################### Data Essay Function ##################
-def get_train_essay(essay_id, 
-                    TRAIN_DIR # = '/content/train/'
-                   ):
-    # TRAIN_DIR = config['base_path'] + "train/"
-    essay_path = os.path.join(TRAIN_DIR, f"{essay_id}.txt")
+################### get Essay Function ##################
+def get_essay(essay_id, DIR):
+    essay_path = os.path.join(DIR, f"{essay_id}.txt")
     essay_text = open(essay_path, 'r').read()
-    return essay_text
-  
-  
-def get_test_essay(essay_id, 
-                   TEST_DIR # = '/content/test/'
-                  ):
-    # TEST_DIR = config['base_path'] + "test/"
-    essay_path = os.path.join(TEST_DIR, f"{essay_id}.txt")
-    essay_text = open(essay_path, 'r').read()
-    return essay_text  
+    return essay_text 
   
   
 ########################### Data ###########################
@@ -84,8 +72,7 @@ def kaggle_competition_data(base_path, # = config['base_path'],
     
     if stage == "train":
         train = pd.read_csv(base_path + 'train.csv')
-        TRAIN_DIR = base_path + "train/"
-        train['essay_text'] = train['essay_id'].apply(get_train_essay)
+        train['essay_text'] = train['essay_id'].apply(lambda x: get_essay(x, DIR = base_path + "train/"))
         index_num = int(train.shape[0] * ratio)
         print("Ratio: ", ratio, "Index Num: ", index_num)
         train = train[:index_num]
@@ -94,9 +81,8 @@ def kaggle_competition_data(base_path, # = config['base_path'],
         return train
 
     else:
-        test = pd.read_csv(base_path + 'test.csv')
-        TEST_DIR = base_path + "test/"
-        test['essay_text'] = test['essay_id'].apply(get_test_essay)
+        test = pd.read_csv(base_path + 'test.csv')        
+        test['essay_text'] = test['essay_id'].apply(lambda x: get_essay(x, DIR = base_path + "test/"))
         print(test.shape)
         print(test.head(3))
 
@@ -104,7 +90,6 @@ def kaggle_competition_data(base_path, # = config['base_path'],
         print(ss.shape)
 
         return test, ss
-
       
       
       
