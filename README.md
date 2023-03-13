@@ -21,7 +21,7 @@
 
  
 ## How to train or inference in CLI? 
-- [pip install](https://github.com/renslightsaber/Kaggle_FB2/blob/main/needtoinstall.md)
+- [pip install ... ](https://github.com/renslightsaber/Kaggle_FB2/blob/main/needtoinstall.md)
 - [and Check Here](https://github.com/renslightsaber/Dacon_Shoppingmall_Reviews_Classificaion/blob/main/how_to_train_inference.md) 
 
  
