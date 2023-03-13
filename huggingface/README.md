@@ -54,6 +54,7 @@ $ python inference.py --base_path './data/' \
                       --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/huggingface/cli/' \
                       --model "microsoft/deberta-v3-base" \
                       --model_type "AutoModelForSequenceClassification" \
+                      --hash "hugging_face_cli" \
                       --n_folds 3 \
                       --n_epochs 3 \
                       --device 'cuda' \
