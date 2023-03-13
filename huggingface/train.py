@@ -84,7 +84,7 @@ def define():
     p.add_argument('--hash', type = str, default = "HuggingFace", help="HASH NAME")
     
     p.add_argument('--model', type = str, default = "microsoft/deberta-v3-base", help="HuggingFace Pretrained Model")    
-    p.add_argument('--model_type', type = str, default = "AutoModelforSequenceClassifier", help="HuggingFace Pretrained Model")
+    p.add_argument('--model_type', type = str, default = "AutoModelForSequenceClassification", help="HuggingFace Pretrained Model")
     
     p.add_argument('--n_folds', type = int, default = 3, help="Folds")
     p.add_argument('--n_epochs', type = int, default = 3, help="Epochs")
@@ -207,7 +207,7 @@ def main(config):
                                                     DataCollatorWithPadding(tokenizer=tokenizer))
   
         # Define Model because of KFold
-        if config.model_type == "AutoModelforSequenceClassifier":
+        if config.model_type == "AutoModelForSequenceClassification":
             model = AutoModelForSequenceClassification.from_pretrained(config.model, 
                                                                        num_labels = 3).to(device)
         else:
