@@ -4,30 +4,41 @@
 #### You can check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kdBMySPzX4wxI_I9xJzguFKxx99HBz-T?usp=sharing) 
  
 
+## Download Data Kaggle API Command 
+```python
+$ kaggle competitions download -c feedback-prize-effectiveness
+$ unzip '*.zip'
+```
+ 
+## [wandb login in CLI interface](https://docs.wandb.ai/ref/cli/wandb-login)
+```python
+$ wandb login --relogin '######### your API token ###########'                  
+``` 
+
+
 
 ## Train 
-```python
-
-$ python train.py --base_path './data/' \
-                  --model_save '/content/drive/MyDrive/ ... /Kaggle FB2/huggingface/cli/' \
-                  --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/huggingface/cli/' \
-                  --hash "hugging_face_cli" \
-                  --use_ratio 1 \
+```bash
+$ python train.py --base_path '/content/Kaggle_FB2/huggingface/' \
+                  --model_save '/content/drive/MyDrive/ ... /Kaggle FB2/hf/cli2/' \
+                  --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/hf/cli2' \
                   --model "microsoft/deberta-v3-base" \
-                  --model_type "AutoModelForSequenceClassification" \
+                  --model_type "AutoModel" \
+                  --hash "hf_automodel_cli_practice" \
                   --grad_clipping True\
                   --n_folds 3 \
                   --n_epochs 3 \
                   --device 'cuda' \
                   --max_length 256 \
-                  --train_bs 8
-                  
-
+                  --train_bs 8 \
+                  --valid_bs 16
 ```
 - `base_path` : Data가 저장된 경로 (Default: `./data/`)
 - `sub_path`  : `submission.csv` 제출하는 경로
 - `model_save`: 학습된 모델이 저장되는 경로
 - `model`: Huggingface Pratrained Model (Default: `"microsoft/deberta-v3-base"`)
+- `model_type`: [`AutoModel`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) or [`AutoModelForSequenceClassification`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification)
+- `hash`: Name for WANDB Monitoring
 - `n_folds`  : Fold 수
 - `n_epochs` : Epoch
 - `seed` : Random Seed (Default: 2022)
