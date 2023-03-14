@@ -1,9 +1,15 @@
 
 ## install
 
+
 #### [wandb](https://docs.wandb.ai/quickstart#set-up-wb)
 ```python
 $ pip install -qqq wandb
+```
+
+#### [kaggle API Github](https://github.com/Kaggle/kaggle-api)
+```python
+$ pip install kaggle --upgrade
 ```
 
 #### [torchmetrics](https://torchmetrics.readthedocs.io/en/stable/)
