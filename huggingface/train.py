@@ -229,7 +229,7 @@ def main(config):
             
         ## training_args
         training_args = TrainingArguments(
-                            output_dir = config.base_path + f'output_{fold}/', # config['base_path'] + f'output_{fold}/', 
+                            output_dir = config.model_save + f'output_{fold}/', # config['base_path'] + f'output_{fold}/', 
                             evaluation_strategy = 'epoch', 
                             per_device_train_batch_size = config.train_bs, 
                             per_device_eval_batch_size = config.valid_bs,
