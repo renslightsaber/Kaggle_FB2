@@ -1,12 +1,16 @@
 # How to train or inference in CLI?
- - [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) with [SequenceClassifierOutput](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1455fFTdWik8K4HhcUbr6t098mzPJ-VSe?usp=share_link) 
- - [AutoModelForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1c3SLFFqISXPF45HStryBOc1XB_NHd1k8?usp=share_link) 
+ - [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) with [SequenceClassifierOutput](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1455fFTdWik8K4HhcUbr6t098mzPJ-VSe?usp=share_link) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/hf_automodel_cli_pr-Baseline/workspace?workspace=user-wako)
+ - [AutoModelForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1c3SLFFqISXPF45HStryBOc1XB_NHd1k8?usp=share_link) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/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_cli-Baseline/workspace?workspace=user-wako)
+ 
+     <img src="/imgs/스크린샷 2023-03-14 오후 10.17.29.png" width="83%"></img>
+
 
 ## Check Jupyter Notebook Version
-- [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) with [SequenceClassifierOutput](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14HjKUnMtbEUPf-9hSV876jSvUi3xQU3S?usp=share_link) 
-- [AutoModelForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1q-k_I3uBHzT9v1z8TuqfyRpAFGs9XpSW?usp=share_link) 
+- [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) with [SequenceClassifierOutput](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14HjKUnMtbEUPf-9hSV876jSvUi3xQU3S?usp=share_link) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/HuggingFace_Rough_AutoModel-Baseline/workspace?workspace=user-wako)
+- [AutoModelForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1q-k_I3uBHzT9v1z8TuqfyRpAFGs9XpSW?usp=share_link) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/HuggingFace_Rough_AutoMFSC-Baseline/workspace?workspace=user-wako)
  
 
+     <img src="/imgs/스크린샷 2023-03-14 오후 10.20.54.png" width="83%"></img>
 
 ## Download Data Kaggle API Command 
 ```python
