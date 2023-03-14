@@ -89,7 +89,7 @@ def inference(model_paths,
               tokenizer, 
               collate_fn, # = DataCollatorWithPadding(tokenizer=tokenizer ),
               bs,
-              device= device):
+              device):
 
     final_preds = []
     
@@ -103,7 +103,7 @@ def inference(model_paths,
         
         print(f"Getting predictions for model {i+1}")
         training_args = TrainingArguments(output_dir=".",
-                                          per_device_eval_batch_size=config['valid_batch_size'],
+                                          per_device_eval_batch_size=bs,
                                           label_names=["target"])
         
         trainer = Trainer(model=model,
