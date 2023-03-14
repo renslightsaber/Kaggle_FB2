@@ -36,6 +36,7 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import AutoTokenizer, AutoModel, AdamW, AutoConfig, DataCollatorWithPadding
 from transformers import Trainer, TrainingArguments
 from transformers import AutoModelForSequenceClassification
+from transformers.modeling_outputs import SequenceClassifierOutput
 
 # Utils
 from tqdm.auto import tqdm, trange
