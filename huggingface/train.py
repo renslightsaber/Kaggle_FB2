@@ -198,14 +198,20 @@ def main(config):
         
         print(f"{y_}==== Fold: {fold} ====={sr_}")
 
-        # DataLoaders
-        # collate_fn = DataCollatorWithPadding(tokenizer=config['tokenizer'] )
-        train_loader, valid_loader = prepare_loader(train, 
-                                                    fold, 
-                                                    tokenizer, 
-                                                    config.max_length, 
-                                                    config.train_bs, 
-                                                    DataCollatorWithPadding(tokenizer=tokenizer))
+        ## Train Valid Split via 'kfold' column
+        train_df = train[train.kfold != fold].reset_index(drop=True)
+        valid_df = train[train.kfold == fold].reset_index(drop=True)
+
+        ## train, valid -> Dataset
+        train_ds = MyDataset(train_df, 
+                             tokenizer = tokenizer,
+                             max_length = config.max_length,
+                             mode = "train")
+
+        valid_ds = MyDataset(valid_df, 
+                             tokenizer = tokenizer,
+                             max_length = config.max_length,
+                             mode = "train")
   
         # Define Model because of KFold
         if config.model_type == "AutoModelForSequenceClassification":
