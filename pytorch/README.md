@@ -54,10 +54,10 @@ $ python train.py --base_path '/content/Kaggle_FB2/pytorch/' \
 
 
 ## Inference 
-```python
-$ python inference.py --base_path './data/' \
-                      --model_save '/content/drive/MyDrive/ .. /Kaggle FB2/huggingface/cli/' \
-                      --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/huggingface/cli/' \
+```bash
+$ python inference.py --base_path '/content/Kaggle_FB2/pytorch/' \
+                      --model_save '/content/drive/MyDrive/ .. /Kaggle FB2/pytorch/cli/' \
+                      --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/pytorch/cli/' \
                       --model "microsoft/deberta-v3-base" \
                       --hash "pytorch_cli" \
                       --n_folds 3 \
