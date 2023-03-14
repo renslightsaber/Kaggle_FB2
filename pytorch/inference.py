@@ -161,7 +161,6 @@ def define():
     p.add_argument('--hash', type = str, default = "HuggingFace", help="HASH NAME")
     
     p.add_argument('--model', type = str, default = "microsoft/deberta-v3-base", help="HuggingFace Pretrained Model")    
-    p.add_argument('--model_type', type = str, default = "AutoModelForSequenceClassification", help="Fine-Tuning Model Type")
     
     p.add_argument('--n_folds', type = int, default = 3, help="Folds")
     p.add_argument('--n_epochs', type = int, default = 3, help="Epochs")
