@@ -212,7 +212,7 @@ def main(config):
     test_loader = make_testloader(test,
                                   tokenizer, 
                                   max_length = config.max_length, 
-                                  bs = config.valid_batch_size,
+                                  bs = config.valid_bs,
                                   collate_fn = DataCollatorWithPadding(tokenizer) )
     
     # model_paths
