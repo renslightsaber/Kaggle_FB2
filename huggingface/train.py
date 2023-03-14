@@ -164,9 +164,9 @@ def main(config):
     print(train.shape)
     print(train.head())
     
-    test.drop(['discourse_id', 'essay_id'], axis =1, inplace = True)
-    print(test.shape)
-    print(test.head())
+    # test.drop(['discourse_id', 'essay_id'], axis =1, inplace = True)
+    # print(test.shape)
+    # print(test.head())
     
     ## Tokenizer
     tokenizer = AutoTokenizer.from_pretrained(config.model)
