@@ -212,7 +212,12 @@ def main(config):
                              tokenizer = tokenizer,
                              max_length = config.max_length,
                              mode = "train")
-  
+        
+
+        ## Collate_fn
+        collate_fn = DataCollatorWithPadding(tokenizer=tokenizer)
+
+
         # Define Model because of KFold
         if config.model_type == "AutoModelForSequenceClassification":
             model = AutoModelForSequenceClassification.from_pretrained(config.model, 
