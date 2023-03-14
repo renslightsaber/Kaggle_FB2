@@ -1,4 +1,4 @@
-# [공사 중][[Kaggle] Feedback Prize - Predicting Effective Arguments](https://www.kaggle.com/competitions/feedback-prize-effectiveness)
+# [[Kaggle] Feedback Prize - Predicting Effective Arguments](https://www.kaggle.com/competitions/feedback-prize-effectiveness)
  Competition URL is closed, and we don't know why.
 
 <img src="/imgs/스크린샷 2023-03-13 오후 2.48.04.png" width="99%"></img>
@@ -18,6 +18,7 @@
  
 ## Purpose : Experience 🤗Huggingface and wandb.
 - Tried to train and inference not only with pytorch🔥 but also with 🤗Huggingface.
+  - During the periods of Compeition, we just concentrated on `score`, which means that we couldn't consider about these.
   - We just wanted Experience of 'wandb' logging.
   - This is why score from cods (on this github repository) is not so good.
 - In practices with 🤗Huggingface library, there're two models
@@ -30,8 +31,8 @@
  
 ## How to train or inference in CLI? 
 - [pip install ... ](https://github.com/renslightsaber/Kaggle_FB2/blob/main/needtoinstall.md)
-- [🔥pytorch - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch/README.md) 
-- [🤗huggingface - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/huggingface/README.md) 
+- [🔥pytorch - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch) 
+- [🤗huggingface - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/huggingface) 
 - Check [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO?workspace=user-wako)
 
 
