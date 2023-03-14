@@ -144,7 +144,7 @@ def main(config):
     train['discourse_effectiveness'] = encoder.fit_transform(train['discourse_effectiveness'])
     
     ## Encoder Save
-    with open(base_path + "hf_le.pkl", "wb") as fp:
+    with open(config.base_path + "hf_le.pkl", "wb") as fp:
       joblib.dump(encoder, fp)
     
     print(train.shape)
