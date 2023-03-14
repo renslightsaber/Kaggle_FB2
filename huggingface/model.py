@@ -17,6 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 
 ## Transforemr Import
 from transformers import AutoTokenizer, AutoModel, AutoConfig
+from transformers.modeling_outputs import SequenceClassifierOutput
 
 
 ########### Mean Pooling ################
