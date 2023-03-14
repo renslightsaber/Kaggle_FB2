@@ -32,5 +32,6 @@
 - [pip install ... ](https://github.com/renslightsaber/Kaggle_FB2/blob/main/needtoinstall.md)
 - [🔥pytorch - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch/README.md) 
 - [🤗huggingface - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/huggingface/README.md) 
+- [Visualized in Wandb](https://wandb.ai/wako/FB_TWO?workspace=user-wako)
 
  
