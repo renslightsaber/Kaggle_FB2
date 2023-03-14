@@ -229,6 +229,9 @@ def main(config):
 
         torch.cuda.empty_cache()
         _ = gc.collect()
+        
+        # wandb finish
+        run.finish()
 
     print(best_scores)
     print("Train Completed")
