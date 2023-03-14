@@ -22,7 +22,7 @@ $ pip install -qqq torchmetrics
 $ pip install -qqq colorama
 ```
 
-#### HuggingFace Transformer
+#### [🤗 HuggingFace Transformer](https://huggingface.co/docs/transformers/installation)
 ```python
 $ pip install -qqq --no-cache-dir transformers sentencepiece
 ```
