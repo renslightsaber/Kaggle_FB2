@@ -16,7 +16,7 @@
  - PRIVATE : 899th
  - Final: 899th / 1558 teams 
  
-## Purpose : Experience '🤗Huggingface' Library and 'wandb' logging.
+## Purpose : Experience 🤗Huggingface and wandb.
 - Tried to train and inference not only with pytorch🔥 but also with 🤗Huggingface.
   - We just wanted Experience of 'wandb' logging.
   - This is why score from cods (on this github repository) is not so good.
