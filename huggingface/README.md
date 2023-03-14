@@ -1,8 +1,12 @@
-# 공사 중 Huggingface Trainer
-# How to train or inference in CLI? [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Yk7dF2YpVsYV6XRJWsM1HKWoWXXKRT1T?usp=sharing)
+# How to train or inference in CLI?
+ - [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) with [SequenceClassifierOutput](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1455fFTdWik8K4HhcUbr6t098mzPJ-VSe?usp=share_link) 
+ - [AutoModelForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1c3SLFFqISXPF45HStryBOc1XB_NHd1k8?usp=share_link) 
 
-#### You can check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kdBMySPzX4wxI_I9xJzguFKxx99HBz-T?usp=sharing) 
+## Check Jupyter Notebook Version
+- [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel) with [SequenceClassifierOutput](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14HjKUnMtbEUPf-9hSV876jSvUi3xQU3S?usp=share_link) 
+- [AutoModelForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForSequenceClassification) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1q-k_I3uBHzT9v1z8TuqfyRpAFGs9XpSW?usp=share_link) 
  
+
 
 ## Download Data Kaggle API Command 
 ```python
@@ -61,11 +65,11 @@ $ python train.py --base_path '/content/Kaggle_FB2/huggingface/' \
 ```python
 
 $ python inference.py --base_path './data/' \
-                      --model_save '/content/drive/MyDrive/ .. /Kaggle FB2/huggingface/cli/' \
-                      --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/huggingface/cli/' \
+                      --model_save '/content/drive/MyDrive/ .. /Kaggle FB2/hf/cli2/' \
+                      --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/hf/cli2/' \
                       --model "microsoft/deberta-v3-base" \
-                      --model_type "AutoModelForSequenceClassification" \
-                      --hash "hugging_face_cli" \
+                      --model_type "AutoModel" \
+                      --hash "hf_automodel_cli_practici" \
                       --n_folds 3 \
                       --n_epochs 3 \
                       --device 'cuda' \
