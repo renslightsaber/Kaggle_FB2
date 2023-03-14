@@ -33,7 +33,7 @@ from tqdm.auto import tqdm, trange
 from colorama import Fore, Back, Style
 b_ = Fore.BLUE
 y_ = Fore.YELLOW
-sr_ = Style.
+sr_ = Style.RESET_ALL
 
 
 
