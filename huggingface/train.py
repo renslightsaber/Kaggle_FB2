@@ -131,7 +131,7 @@ def main(config):
         
 
     ### K Fold
-    skf = GroupKFold(n_splits = config['n_folds'])
+    skf = GroupKFold(n_splits = config.n_folds)
 
     for fold, ( _, val_) in enumerate(skf.split(X=train, groups = train.essay_id)):
         train.loc[val_ , "kfold"] = int(fold)
