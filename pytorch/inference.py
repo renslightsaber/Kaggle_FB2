@@ -131,7 +131,7 @@ def trained_model_paths(n_folds, # = config['n_folds'],
 def inference(model_paths, 
               model_name, # = config['model'], 
               dataloader, # = test_loader, 
-              device= device):
+              device):
 
     final_preds = []
     
@@ -185,9 +185,9 @@ def main(config):
     ## Data
     test, ss = kaggle_competition_data(base_path = config.base_path, 
                                     stage = "test", 
-                                    ratio = config.use_ratio)
+                                    ratio = 1)
     print(test.shape, ss.shape)
-    print(train.head(2))
+    print(test.head(2))
     
     ## Set Seed
     set_seed(config.seed)
