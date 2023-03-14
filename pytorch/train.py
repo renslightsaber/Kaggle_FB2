@@ -64,7 +64,7 @@ def define():
     p.add_argument('--model_save', type = str, default = "./models/", help="Data Folder Path")
     p.add_argument('--sub_path', type = str, default = "./submission/", help="Data Folder Path")
    
-    p.add_argument('--use_ratio', type = str, default = "./data/", help="Percentage of data to train")
+    p.add_argument('--use_ratio', type = float, default = 0.4, help="Percentage of data to train")
     
     p.add_argument('--hash', type = str, default = "Pytorch", help="HASH NAME")
     
