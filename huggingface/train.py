@@ -220,7 +220,7 @@ def main(config):
                             output_dir = config.base_path + f'output_{fold}/', # config['base_path'] + f'output_{fold}/', 
                             evaluation_strategy = 'epoch', 
                             per_device_train_batch_size = config.train_batch_size, 
-                            per_device_eval_batch_size = config.train_batch_size,
+                            per_device_eval_batch_size = config.valid_batch_size,
                             num_train_epochs= config.n_epochs, 
                             learning_rate = config.learning_rate,
                             weight_decay = config.weight_decay, 
