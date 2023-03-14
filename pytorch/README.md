@@ -1,4 +1,3 @@
-# 공사 중 Pytorch
 # How to train or inference in CLI? [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1M7UAYk6ONEjpL5QaOPYb8zssmDDFGNXY?usp=sharing) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/pytorch_cli_practice-Baseline/workspace?workspace=user-wako)
 
 
