@@ -159,7 +159,7 @@ def main(config):
                                     stage = "test", 
                                     ratio = 1)
     print(test.shape, ss.shape)
-    print(train.head(2))
+    print(test.head(2))
     
     ## Set Seed
     set_seed(config.seed)
