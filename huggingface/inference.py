@@ -157,7 +157,7 @@ def main(config):
     ## Data
     test, ss = kaggle_competition_data(base_path = config.base_path, 
                                     stage = "test", 
-                                    ratio = config.use_ratio)
+                                    ratio = 1)
     print(test.shape, ss.shape)
     print(train.head(2))
     
@@ -208,6 +208,11 @@ def main(config):
     print("Before completing sample_submission.csv")
     print(ss.shape)
     print(ss.head(3))
+    
+    ## Softmax
+    preds = torch.softmax(torch.tensor(f1_preds), dim=1)
+    preds = preds.numpy()
+    print("After Softmax: ",preds)
     
     ss['Adequate'] = f1_preds[:, 0]
     ss['Effective'] = f1_preds[:, 1]
