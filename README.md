@@ -16,9 +16,10 @@
  - PRIVATE : 899th
  - Final: 899th / 1558 teams 
  
-### Purpose : Experience '🤗Huggingface' Library and 'wandb' logging.
-- We just wanted Experience of 'wandb' logging.
+## Purpose : Experience '🤗Huggingface' Library and 'wandb' logging.
 - Tried to train and inference not only with pytorch🔥 but also with 🤗Huggingface.
+  - We just wanted Experience of 'wandb' logging.
+  - This is why score from cods (on this github repository) is not so good.
 - In practices with 🤗Huggingface library, there're two models
   - [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel)  
     : This could be different  
