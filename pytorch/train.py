@@ -112,7 +112,7 @@ def main(config):
         
 
     ### K Fold
-    skf = GroupKFold(n_splits = config['n_folds'])
+    skf = GroupKFold(n_splits = config.n_folds)
 
     for fold, ( _, val_) in enumerate(skf.split(X=train, groups = train.essay_id)):
         train.loc[val_ , "kfold"] = int(fold)
@@ -125,7 +125,7 @@ def main(config):
     train['discourse_effectiveness'] = encoder.fit_transform(train['discourse_effectiveness'])
     
     ## Encoder Save
-    with open(base_path + "le.pkl", "wb") as fp:
+    with open(base_path + "pytorch_le.pkl", "wb") as fp:
       joblib.dump(encoder, fp)
     
     print(train.shape)
