@@ -16,11 +16,14 @@
  - PRIVATE : 899th
  - Final: 899th / 1558 teams 
  
-## Purpose : Experience 🤗Huggingface and wandb.
-- Tried to train and inference not only with pytorch🔥 but also with 🤗Huggingface.
+## Purpose : Experience 🤗Huggingface, Pytorch Lightning⚡ and wandb.
+- Train and inference not only with pytorch🔥 but also with 🤗Huggingface.
   - During the periods of Compeition, we just concentrated on `score`, which means that we couldn't consider about these.
   - We just wanted Experience of 'wandb' logging.
-  - This is why score from cods (on this github repository) is not so good.
+  - This is why score from codes (on this github repository) is not so good.
+- Also, train and inference with Pytorch Lightning⚡.
+  - Could write the code briefly because of Pytorch Lightning⚡'s convenience.
+  - Also Pytorch Lightning⚡ allows logging in wandb easily.  
 - In practices with 🤗Huggingface library, there're two models
   - [AutoModel](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModel)  
     : This could be different  
