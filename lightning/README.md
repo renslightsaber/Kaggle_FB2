@@ -19,11 +19,11 @@ $ wandb login --relogin '######### your API token ###########'
 
 ## Train 
 ```bash
-$ python train.py --base_path '/content/Kaggle_FB2/pytorch/' \
-                  --model_save '/content/drive/MyDrive/ ... /Kaggle FB2/pytorch/cli/' \
-                  --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/pytorch/cli' \
+$ python train.py --base_path '/content/Kaggle_FB2/lightning/' \
+                  --model_save '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli/' \
+                  --sub_path '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli' \
                   --model "microsoft/deberta-v3-base" \
-                  --hash "pytorch_cli_practice" \
+                  --hash "Lightning_cli" \
                   --grad_clipping True\
                   --n_folds 3 \
                   --n_epochs 3 \
@@ -45,7 +45,7 @@ $ python train.py --base_path '/content/Kaggle_FB2/pytorch/' \
 - `ratio` : 데이터를 Split하여 `train`(학습) 과 `valid`(성능 평가)를 만드는 비율을 의미. 정확히는 `train`의 Size 결정
 - `device`: GPU를 통한 학습이 가능하다면, `cuda` 로 설정할 수 있다.
 - `learning_rate`, `weight_decay`, `min_lr`, `T_max` 등은 생략 
-- [`train.py`](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch/train.py) 참고!   
+- [`train.py`](https://github.com/renslightsaber/Kaggle_FB2/blob/main/lightning/train.py) 참고!   
 
 
 ## 주의
@@ -56,11 +56,11 @@ $ python train.py --base_path '/content/Kaggle_FB2/pytorch/' \
 
 ## Inference 
 ```bash
-$ python inference.py --base_path '/content/Kaggle_FB2/pytorch/' \
-                      --model_save '/content/drive/MyDrive/ .. /Kaggle FB2/pytorch/cli/' \
-                      --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/pytorch/cli/' \
+$ python inference.py --base_path '/content/Kaggle_FB2/lightning/' \
+                      --model_save '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli/' \
+                      --sub_path '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli' \
                       --model "microsoft/deberta-v3-base" \
-                      --hash "pytorch_cli" \
+                      --hash "lightning_cli_practice" \
                       --n_folds 3 \
                       --n_epochs 3 \
                       --device 'cuda' \
@@ -77,7 +77,7 @@ $ python inference.py --base_path '/content/Kaggle_FB2/pytorch/' \
 - `valid_bs` : Batch Size for Inference (Default: 16) 
 - `max_length` : Max Length (Default: 512) for HuggingFace Tokenizer
 - `device`: GPU를 통한 학습이 가능하다면, `cuda` 로 설정할 수 있다.
-- [`inference.py`](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch/inference.py) 참고!   
+- [`inference.py`](https://github.com/renslightsaber/Kaggle_FB2/blob/main/lightning/inference.py) 참고!   
 
 
 
