@@ -232,6 +232,10 @@ def main(config):
                     val_dataloaders = valid_loader,
                     )
         
+        
+        # wandb finish()
+        wandb.finish()
+        
         torch.cuda.empty_cache()
         _ = gc.collect()
         
