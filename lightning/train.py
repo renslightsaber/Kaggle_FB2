@@ -72,7 +72,7 @@ def define():
    
     p.add_argument('--use_ratio', type = float, default = 0.4, help="Percentage of data to train")
     
-    p.add_argument('--hash', type = str, default = "Pytorch", help="HASH NAME")
+    p.add_argument('--hash', type = str, default = "Lightning", help="HASH NAME")
     
     p.add_argument('--model', type = str, default = "microsoft/deberta-v3-base", help="HuggingFace Pretrained Model")
     
