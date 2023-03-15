@@ -203,7 +203,7 @@ def main(config):
     ## train
     train = kaggle_competition_data(base_path = config.base_path, 
                                     stage = "train", 
-                                    ratio = config.use_ratio)
+                                    ratio = .3))
     
     ## n_classes
     n_classes = train['discourse_effectiveness'].nunique()
