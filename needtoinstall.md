@@ -8,25 +8,31 @@ $ pip install -qqq wandb
 ```
 
 #### [kaggle API Github](https://github.com/Kaggle/kaggle-api)
-```python
+```bash
 $ pip install kaggle --upgrade
 ```
 
 #### [torchmetrics](https://torchmetrics.readthedocs.io/en/stable/)
-```python
+```bash
 $ pip install -qqq torchmetrics
 ```
 
 #### [colorama](https://github.com/tartley/colorama)
-```python
+```bash
 $ pip install -qqq colorama
 ```
 
 #### [🤗 HuggingFace Transformer](https://huggingface.co/docs/transformers/installation)
-```python
+```bash
 $ pip install -qqq --no-cache-dir transformers sentencepiece
 ```
-#### [Pytorch Lightning⚡](https://huggingface.co/docs/transformers/installation)
-```python
+#### [Pytorch Lightning⚡](https://github.com/Lightning-AI/lightning#install)
+```bash
 $ pip install -qqq pytorch-lightning
 ```
+or
+
+```bash
+$ pip install -qqq lightning
+```
+
