@@ -59,8 +59,9 @@ class Model(nn.Module):
         outputs = self.softmax(outputs)
         
         return outputs
+    
       
-      
+############### Pytorch Lightning Model ################      
 class PLModel(pl.LightningModule):
 
     def __init__(self,
