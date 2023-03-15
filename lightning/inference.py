@@ -126,7 +126,7 @@ def trained_model_paths(n_folds, # = config['n_folds'],
 
     model_paths_f1 = []
     for num in range(0, n_folds):
-        model_paths_f1.append(model_save + f'fold_{fold}/best_model.ckpt')
+        model_paths_f1.append(model_save + f'fold_{num}/best_model.ckpt')
 
     print(len(model_paths_f1))
     print(model_paths_f1)
