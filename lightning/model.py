@@ -95,7 +95,7 @@ class PLModel(pl.LightningModule):
         targets = batch['target']
  
         # y_preds
-        y_preds = model(ids, mask) 
+        y_preds = self.forward(ids, mask) 
         
         # Loss
         loss = self.loss_fn(y_preds, targets)
@@ -119,7 +119,7 @@ class PLModel(pl.LightningModule):
         return self.shared_step(batch, "valid")
 
     def configure_optimizers(self):
-        optimizer = AdamW(model.parameters(), lr = self.lr, weight_decay = self.wd)
+        optimizer = AdamW(self.parameters(), lr = self.lr, weight_decay = self.wd)
         scheduler = CosineWarmupScheduler(optimizer=optimizer, warmup=100, max_iters=2000)
         return {"optimizer": optimizer, "lr_scheduler": scheduler}
       
