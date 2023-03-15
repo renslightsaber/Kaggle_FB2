@@ -26,3 +26,7 @@ $ pip install -qqq colorama
 ```python
 $ pip install -qqq --no-cache-dir transformers sentencepiece
 ```
+#### [Pytorch Lightning⚡](https://huggingface.co/docs/transformers/installation)
+```python
+$ pip install -qqq pytorch-lightning
+```
