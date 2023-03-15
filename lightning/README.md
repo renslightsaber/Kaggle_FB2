@@ -4,7 +4,6 @@
 #### Check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N6SffxT7rwqXZ_Ts4Ooaf6I5YF_SPGC4?usp=sharing) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/Lightning-Baseline/workspace?workspace=user-wako)
 
 <img src="/imgs/스크린샷 2023-03-16 오전 8.15.17.png" width="85%"></img>
-<img src="/imgs/스크린샷 2023-03-16 오전 8.15.35.png" width="85%"></img>
 
   
 ## Download Data Kaggle API Command 
