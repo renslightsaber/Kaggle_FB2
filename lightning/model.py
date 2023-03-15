@@ -24,7 +24,7 @@ from utils import *
 import pytorch_lightning as pl
 
 ## Transforemr Import
-from transformers import AutoTokenizer, AutoModel, AutoConfig
+from transformers import AutoTokenizer, AutoModel, AdamW, AutoConfig, DataCollatorWithPadding
 
 ########### Mean Pooling ################
 class MeanPooling(nn.Module):
