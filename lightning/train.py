@@ -58,7 +58,7 @@ warnings.filterwarnings("ignore")
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 from dataloader import *
-from new_trainer import *
+# from new_trainer import *
 from model import *
 from utils import *
 
