@@ -150,7 +150,12 @@ def inference(model_paths,
                         wd = wd,
                         n_classes = n_classes,
                         ).to(device)
-        model.load_from_checkpoint(path)
+        model.load_from_checkpoint(path, 
+                                   model_name = model_name,
+                                   lr = lr,
+                                   wd = wd,
+                                   n_classes = n_classes,
+                                   ).to(device)
         
         print(f"Getting predictions for model {i+1}")
         preds = test_func(model, dataloader, device)
@@ -249,13 +254,15 @@ def main(config):
                                          model_save = config.model_save)
                                         
     ## Inference GoGo
-    f1_preds = inference(model_paths_f1, 
-                         config.model, 
-                         test_loader, 
-                         config.learning_rate,
-                         config.weight_decay,
-                         n_classes,
-                         device)
+    f1_preds = inference(model_paths = model_paths_f1, 
+                         model_name = config.model, 
+                         dataloader = test_loader, 
+                         lr = config.learning_rate,
+                         wd = config.weight_decay,
+                         n_classes = n_classes,
+                         device = device)
+ 
+      
     print("Shape of f1_preds: ", f1_preds.shape)
     
     ## Submission File  
