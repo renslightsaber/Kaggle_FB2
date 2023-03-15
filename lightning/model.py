@@ -15,6 +15,8 @@ import torch.nn as nn
 from torch.optim import lr_scheduler
 from torch.utils.data import Dataset, DataLoader
 
+from utils import *
+
 # Pytorch Lightning
 import pytorch_lightning as pl
 
