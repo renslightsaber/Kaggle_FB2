@@ -33,6 +33,7 @@
 - [pip install ... ](https://github.com/renslightsaber/Kaggle_FB2/blob/main/needtoinstall.md)
 - [🔥pytorch - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/pytorch) 
 - [🤗huggingface - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/huggingface) 
+- [⚡Pytorch Lightning - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/lightning) 
 - Check [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO?workspace=user-wako)
 
 
