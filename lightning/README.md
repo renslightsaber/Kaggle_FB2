@@ -1,9 +1,10 @@
-# [공사 중][Pytorch Lightning⚡] How to train or inference in CLI? [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1M7UAYk6ONEjpL5QaOPYb8zssmDDFGNXY?usp=sharing) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/pytorch_cli_practice-Baseline/workspace?workspace=user-wako)
+# [공사 중][Pytorch Lightning⚡] How to train or inference in CLI? [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bqjWX6aCle9JyL03RXgo6SBw83ATJBkZ?usp=sharing) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/Lightning_cli-Baseline/workspace?workspace=user-wako)
 
 
-#### Check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IimJTkmvZ8bFCXUzQhXbYHGBaqk3Sfx4?usp=sharing) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/Pytorch-Baseline/workspace?workspace=user-wako)
+#### Check Jupyter Notebook Version at [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N6SffxT7rwqXZ_Ts4Ooaf6I5YF_SPGC4?usp=sharing) [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO/groups/Lightning-Baseline/workspace?workspace=user-wako)
 
-<img src="/imgs/스크린샷 2023-03-14 오후 10.08.45.png" width="85%"></img>
+<img src="/imgs/스크린샷 2023-03-16 오전 8.15.17.png" width="85%"></img>
+<img src="/imgs/스크린샷 2023-03-16 오전 8.15.35.png" width="85%"></img>
 
   
 ## Download Data Kaggle API Command 
@@ -20,8 +21,8 @@ $ wandb login --relogin '######### your API token ###########'
 ## Train 
 ```bash
 $ python train.py --base_path '/content/Kaggle_FB2/lightning/' \
-                  --model_save '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli/' \
-                  --sub_path '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli' \
+                  --model_save '/content/drive/MyDrive/ ... /Kaggle FB2/pl/cli/' \
+                  --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/pl/cli' \
                   --model "microsoft/deberta-v3-base" \
                   --hash "Lightning_cli" \
                   --grad_clipping True\
@@ -57,8 +58,8 @@ $ python train.py --base_path '/content/Kaggle_FB2/lightning/' \
 ## Inference 
 ```bash
 $ python inference.py --base_path '/content/Kaggle_FB2/lightning/' \
-                      --model_save '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli/' \
-                      --sub_path '/content/drive/MyDrive/깃헙/Projects/Kaggle FB2/pl/cli' \
+                      --model_save '/content/drive/MyDrive/ ... s/Kaggle FB2/pl/cli/' \
+                      --sub_path '/content/drive/MyDrive/ ... /Kaggle FB2/pl/cli' \
                       --model "microsoft/deberta-v3-base" \
                       --hash "lightning_cli_practice" \
                       --n_folds 3 \
