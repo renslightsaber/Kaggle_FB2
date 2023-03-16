@@ -39,5 +39,11 @@
 - [⚡Pytorch Lightning - Practice in cli](https://github.com/renslightsaber/Kaggle_FB2/blob/main/lightning) 
 - Check [![wandb](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-gradient.svg)](https://wandb.ai/wako/FB_TWO?workspace=user-wako)
 
-
- 
+## Refrences
+- [Pytorch Lightning wandb_logger](https://docs.wandb.ai/guides/integrations/lightning) 
+- [LightningModule from checkpoint](https://lightning.ai/docs/pytorch/stable/common/checkpointing_basic.html#lightningmodule-from-checkpoint)
+- [Trainer accelerater](https://lightning.ai/docs/pytorch/stable/common/trainer.html#trainer-flags)
+- [GunwooHan/nunbody_segmentation](https://github.com/GunwooHan/nunbody_segmentation)
+- [cherryb12/2022-AI-Challenge-QA-Answering](https://github.com/cherryb12/2022-AI-Challenge-QA-Answering)
+- [[Pytorch] FeedBack DeBERTa-V3 Baseline](https://www.kaggle.com/code/debarshichanda/pytorch-feedback-deberta-v3-baseline)
+- [FeedBack Inference](https://www.kaggle.com/code/debarshichanda/feedback-inference)
